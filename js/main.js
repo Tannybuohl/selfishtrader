@@ -205,6 +205,7 @@ setInterval(paintHuddle, huddleTick);
   script.src = "https://s3.tradingview.com/tv.js";
   script.onload = () => {
     if (!window.TradingView) return;
+    const narrow = window.matchMedia("(max-width: 720px)").matches;
     new window.TradingView.widget({
       autosize: true,
       symbol: "AMEX:SPY",
@@ -215,10 +216,10 @@ setInterval(paintHuddle, huddleTick);
       locale: "en",
       toolbar_bg: "#080a08",
       enable_publishing: false,
-      hide_top_toolbar: false,
+      hide_top_toolbar: narrow,
       allow_symbol_change: true,
-      withdateranges: true,
-      hide_side_toolbar: false,
+      withdateranges: !narrow,
+      hide_side_toolbar: true,
       details: false,
       studies: ["STD;RSI"],
       container_id: "tv-spy",
