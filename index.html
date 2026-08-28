@@ -8,13 +8,23 @@
       name="description"
       content="Join Selfish Trader, Chris King's private trading community. Daily stock and options alerts, Sunday huddles, watchlists, coaching, and a room of serious traders."
     />
-    <meta property="og:title" content="Selfish Trader" />
+    <meta property="og:title" content="Selfish Trader — Join the room" />
     <meta
       property="og:description"
       content="Daily alerts. Weekly huddles. Real community. Trade with structure, not hype."
     />
-    <meta property="og:image" content="assets/book-mockup.jpg" />
+    <meta property="og:image" content="https://selfishtrader.com/assets/og-share.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://selfishtrader.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Selfish Trader — Join the room" />
+    <meta
+      name="twitter:description"
+      content="Daily alerts. Weekly huddles. Real community. Trade with structure, not hype."
+    />
+    <meta name="twitter:image" content="https://selfishtrader.com/assets/og-share.png" />
     <link rel="icon" href="assets/logo-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css?v=2" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -132,6 +142,21 @@
         </div>
       </section>
 
+      <section class="huddle" id="huddle" data-huddle>
+        <div class="huddle__copy">
+          <p class="kicker">Next huddle</p>
+          <h2 data-huddle-status>Next huddle · Sunday 8:00 PM EST</h2>
+          <p>Weekly watchlist and live coaching. Be in the chair before the open.</p>
+        </div>
+        <div class="clock" aria-live="polite">
+          <div><b data-huddle-d>00</b><span>Days</span></div>
+          <div><b data-huddle-h>00</b><span>Hours</span></div>
+          <div><b data-huddle-m>00</b><span>Minutes</span></div>
+          <div><b data-huddle-s>00</b><span>Seconds</span></div>
+        </div>
+        <a class="btn btn--green" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Join before Sunday</a>
+      </section>
+
       <section class="flow" id="flow">
         <div class="section-head">
           <p class="kicker">01 — How it works</p>
@@ -228,10 +253,23 @@
             </div>
           </article>
         </div>
-        <figure class="shot">
-          <img src="assets/alerts.png" alt="Daily stock and options alerts posted in the Selfish Trader chat" />
-          <figcaption>Inside the alert feed — tickers, strikes, and levels, not vague “watch this.”</figcaption>
-        </figure>
+        <div class="desk-split">
+          <figure class="shot">
+            <img src="assets/alerts.png" alt="Daily stock and options alerts posted in the Selfish Trader chat" />
+            <figcaption>Inside the alert feed — tickers, strikes, and levels, not vague “watch this.”</figcaption>
+          </figure>
+          <aside class="alert-card">
+            <p class="alert-card__tag">Sample format</p>
+            <p class="alert-card__head">$SPY <span class="up">CALLS</span></p>
+            <dl>
+              <div><dt>Strike</dt><dd>$580</dd></div>
+              <div><dt>Exp</dt><dd>09/04/2026</dd></div>
+              <div><dt>Trigger</dt><dd>Break &amp; hold above $578.50</dd></div>
+              <div><dt>Invalidation</dt><dd>5m close back under $576</dd></div>
+            </dl>
+            <p class="alert-card__note">Example only — not a live trade, not financial advice, results are not typical.</p>
+          </aside>
+        </div>
 
         <div class="week" aria-label="Weekly session board">
           <article data-day="Sun"><b>Sun</b><span>Huddle 8pm</span><small>Watchlist</small></article>
@@ -299,6 +337,25 @@
               <li>One-on-one coaching</li>
             </ul>
             <a class="btn btn--green" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Get Core Access</a>
+          </article>
+        </div>
+        <div class="quotes">
+          <article>
+            <p class="stars" aria-label="5 stars">★★★★★</p>
+            <blockquote>
+              “A community who cares and wants to help you through your trading struggles.”
+            </blockquote>
+            <cite>Dr.Bull · Whop review</cite>
+          </article>
+          <article class="quote--stat">
+            <p class="quote__num">4.9</p>
+            <p>Average on Whop</p>
+            <cite>7 verified ratings</cite>
+          </article>
+          <article class="quote--stat">
+            <p class="quote__num">74</p>
+            <p>Traders in the room</p>
+            <a class="text-link" href="https://whop.com/selfish-trader/reviews" target="_blank" rel="noopener">Read reviews on Whop →</a>
           </article>
         </div>
         <p class="fine">Subscriptions renew until you cancel. After checkout, check the email you used to pay — including spam.</p>
@@ -413,6 +470,6 @@
       <p class="copy">Copyright © 2026 Selfish Trader. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
   </body>
 </html>

@@ -310,6 +310,7 @@ p {
 }
 
 .hero,
+.huddle,
 .flow,
 .tape,
 .desk,
@@ -322,6 +323,7 @@ p {
   margin: 0 auto;
 }
 
+.huddle,
 .flow,
 .tape,
 .desk,
@@ -560,6 +562,173 @@ p {
 
 .flow {
   padding: 0 0 4.5rem;
+}
+
+.huddle {
+  display: grid;
+  grid-template-columns: 1.1fr auto auto;
+  gap: 1.5rem 2rem;
+  align-items: center;
+  margin: 0 auto 4.5rem;
+  padding: 1.4rem 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--green) 28%, var(--line));
+  background: linear-gradient(90deg, #102318 0%, var(--bg-2) 55%);
+}
+
+.huddle h2 {
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  margin: 0.2rem 0 0.35rem;
+}
+
+.huddle p:not(.kicker) {
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+}
+
+.huddle.is-live {
+  border-color: color-mix(in srgb, var(--green) 55%, var(--line));
+  box-shadow: 0 0 0 1px rgba(46, 229, 157, 0.12);
+}
+
+.clock {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.clock div {
+  min-width: 4.4rem;
+  padding: 0.55rem 0.45rem 0.6rem;
+  text-align: center;
+  background: #080a08;
+  border: 1px solid var(--line);
+}
+
+.clock b {
+  display: block;
+  font-family: var(--mono);
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--green);
+}
+
+.clock span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.desk-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  margin-top: 1.75rem;
+}
+
+.desk-split .shot {
+  margin: 0;
+}
+
+.alert-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.3rem 1.2rem;
+  background: #101410;
+  border: 1px solid var(--line);
+}
+
+.alert-card__tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e8c547;
+  margin-bottom: 0.7rem;
+}
+
+.alert-card__head {
+  font-family: var(--mono);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.alert-card dl {
+  margin: 0;
+  flex: 1;
+}
+
+.alert-card dl > div {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.5rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.alert-card dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.alert-card dd {
+  margin: 0;
+  color: var(--cream);
+}
+
+.alert-card__note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: 1.3fr 0.85fr 0.85fr;
+  gap: 1rem;
+  margin: 1.75rem 0 0;
+}
+
+.quotes article {
+  padding: 1.3rem 1.25rem 1.25rem;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+}
+
+.quotes blockquote {
+  margin: 0.55rem 0 0.85rem;
+  padding: 0;
+  border: 0;
+  font-size: 1.25rem;
+}
+
+.stars {
+  color: var(--green);
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+.quote__num {
+  font-family: var(--mono);
+  font-size: 2.6rem;
+  color: var(--green);
+  line-height: 1;
+  margin-bottom: 0.45rem;
+}
+
+.quote--stat p:not(.quote__num) {
+  color: var(--cream-dim);
+}
+
+.quote--stat .text-link {
+  display: inline-block;
+  margin-top: 0.85rem;
 }
 
 .week {
@@ -1054,12 +1223,28 @@ summary::-webkit-details-marker {
   }
 
   .hero,
+  .huddle,
   .book,
   .plans,
   .proof,
   .form,
-  .steps {
+  .steps,
+  .desk-split,
+  .quotes {
     grid-template-columns: 1fr;
+  }
+
+  .huddle .btn {
+    width: 100%;
+  }
+
+  .clock {
+    justify-content: space-between;
+  }
+
+  .clock div {
+    flex: 1;
+    min-width: 0;
   }
 
   .steps li + li {

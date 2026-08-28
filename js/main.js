@@ -75,6 +75,107 @@ function paintSession() {
 paintSession();
 setInterval(paintSession, 30000);
 
+function nyParts(date = new Date()) {
+  const map = {};
+  new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    weekday: "short",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  })
+    .formatToParts(date)
+    .forEach((p) => {
+      if (p.type !== "literal") map[p.type] = p.value;
+    });
+  let hour = Number(map.hour);
+  if (hour === 24) hour = 0;
+  return {
+    weekday: map.weekday,
+    year: Number(map.year),
+    month: Number(map.month),
+    day: Number(map.day),
+    hour,
+    minute: Number(map.minute),
+    second: Number(map.second),
+  };
+}
+
+function nyWallToUtc(year, month, day, hour, minute, second = 0) {
+  const utc = Date.UTC(year, month - 1, day, hour, minute, second);
+  const shown = nyParts(new Date(utc));
+  const shownUtc = Date.UTC(
+    shown.year,
+    shown.month - 1,
+    shown.day,
+    shown.hour,
+    shown.minute,
+    shown.second
+  );
+  const wanted = Date.UTC(year, month - 1, day, hour, minute, second);
+  return utc + (wanted - shownUtc);
+}
+
+function addDays(year, month, day, n) {
+  const dt = new Date(Date.UTC(year, month - 1, day + n));
+  return { year: dt.getUTCFullYear(), month: dt.getUTCMonth() + 1, day: dt.getUTCDate() };
+}
+
+function nextHuddle() {
+  const ny = nyParts();
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const dow = days.indexOf(ny.weekday);
+  const mins = ny.hour * 60 + ny.minute;
+  const start = 20 * 60;
+  const end = 21 * 60;
+
+  if (dow === 0 && mins >= start && mins < end) {
+    return { live: true, target: nyWallToUtc(ny.year, ny.month, ny.day, 21, 0, 0) };
+  }
+
+  let daysAhead = (7 - dow) % 7;
+  if (dow === 0 && mins >= end) daysAhead = 7;
+  if (dow === 0 && mins < start) daysAhead = 0;
+
+  const targetDay = addDays(ny.year, ny.month, ny.day, daysAhead);
+  return {
+    live: false,
+    target: nyWallToUtc(targetDay.year, targetDay.month, targetDay.day, 20, 0, 0),
+  };
+}
+
+function paintHuddle() {
+  const root = document.querySelector("[data-huddle]");
+  if (!root) return;
+  const { live, target } = nextHuddle();
+  root.classList.toggle("is-live", live);
+  const total = Math.max(0, Math.floor((target - Date.now()) / 1000));
+  const parts = {
+    d: Math.floor(total / 86400),
+    h: Math.floor((total % 86400) / 3600),
+    m: Math.floor((total % 3600) / 60),
+    s: total % 60,
+  };
+  Object.entries(parts).forEach(([key, val]) => {
+    const el = root.querySelector(`[data-huddle-${key}]`);
+    if (el) el.textContent = String(val).padStart(2, "0");
+  });
+  const status = root.querySelector("[data-huddle-status]");
+  if (status) {
+    status.textContent = live
+      ? "Huddle is live now — Sunday 8:00 PM EST"
+      : "Next huddle · Sunday 8:00 PM EST";
+  }
+}
+
+paintHuddle();
+const huddleTick = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 30000 : 1000;
+setInterval(paintHuddle, huddleTick);
+
 (function loadLiveChart() {
   const mount = document.querySelector("#tv-spy");
   if (!mount) return;
