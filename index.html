@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selfish Trader — Learn to trade with structure, not hype</title>
+    <meta
+      name="description"
+      content="Join Selfish Trader, Chris King's private trading community. Daily stock and options alerts, Sunday huddles, watchlists, coaching, and a room of serious traders."
+    />
+    <meta property="og:title" content="Selfish Trader" />
+    <meta
+      property="og:description"
+      content="Daily alerts. Weekly huddles. Real community. Trade with structure, not hype."
+    />
+    <meta property="og:image" content="assets/book-mockup.jpg" />
+    <meta property="og:url" content="https://selfishtrader.com" />
+    <link rel="icon" href="assets/logo-mark.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="brandbar">What you focus on will grow</div>
+
+    <header class="nav">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top">
+          <span class="nav__mark">
+            <img src="assets/logo-mark.png" alt="" />
+          </span>
+          <span class="nav__name"><b>Selfish</b> Trader</span>
+        </a>
+        <div class="session" data-session>
+          <span class="session__dot"></span>
+          <span data-session-name>Session</span>
+          <span data-session-time>--:-- EST</span>
+        </div>
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+        <nav id="menu" class="nav__links">
+          <a href="#desk">The desk</a>
+          <a href="#flow">How it works</a>
+          <a href="#join">Membership</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn--green btn--sm" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Join the room</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="tape-bar" aria-hidden="true">
+      <div class="tape-fallback">
+        <span class="up">SPY</span><span>QQQ</span><span>IWM</span><span class="up">NVDA</span><span>TSLA</span><span>AAPL</span><span class="up">BTC</span><span>ETH</span>
+        <span class="up">SPY</span><span>QQQ</span><span>IWM</span><span class="up">NVDA</span><span>TSLA</span><span>AAPL</span><span class="up">BTC</span><span>ETH</span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero__copy">
+          <p class="eyebrow">
+            <span class="live"></span>
+            Private trading community · New York time
+          </p>
+          <h1>Take the first step towards <em>financial freedom.</em></h1>
+          <p class="lede">
+            Join the live room. Learn how to read alerts, act on news, and take profits
+            in a way that actually serves you — with traders who want you to win.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--green" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Join Core Access</a>
+            <a class="btn btn--ghost" href="#tape">Watch the intro</a>
+          </div>
+          <ul class="stats">
+            <li><strong>4.9</strong><span>Whop rating</span></li>
+            <li><strong>Sun 8pm</strong><span>Live huddle</span></li>
+            <li><strong>7:00am</strong><span>Pre-market</span></li>
+            <li><strong>M–F</strong><span>Daily alerts</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span>SPY · 5m</span>
+              <span class="session session--ghost" data-session>
+                <span class="session__dot"></span>
+                <span data-session-name>Session</span>
+              </span>
+            </div>
+            <svg class="chart" viewBox="0 0 520 280" role="img">
+              <defs>
+                <linearGradient id="fillG" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#2ee59d" stop-opacity="0.18" />
+                  <stop offset="100%" stop-color="#2ee59d" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="chart__grid" d="M0 70h520M0 140h520M0 210h520" />
+              <polyline class="chart__line" points="8,210 40,198 72,186 104,194 136,160 168,168 200,132 232,140 264,108 296,118 328,84 360,96 392,70 424,78 456,52 488,44 512,38" />
+              <polygon class="chart__fill" points="8,210 40,198 72,186 104,194 136,160 168,168 200,132 232,140 264,108 296,118 328,84 360,96 392,70 424,78 456,52 488,44 512,38 512,260 8,260" />
+              <g class="candles">
+                <g class="c dn" transform="translate(28,0)"><rect x="7" y="168" width="2" height="48"/><rect x="2" y="180" width="12" height="28"/></g>
+                <g class="c up" transform="translate(60,0)"><rect x="7" y="150" width="2" height="52"/><rect x="2" y="158" width="12" height="32"/></g>
+                <g class="c up" transform="translate(92,0)"><rect x="7" y="142" width="2" height="44"/><rect x="2" y="148" width="12" height="28"/></g>
+                <g class="c dn" transform="translate(124,0)"><rect x="7" y="148" width="2" height="56"/><rect x="2" y="156" width="12" height="34"/></g>
+                <g class="c up" transform="translate(156,0)"><rect x="7" y="118" width="2" height="58"/><rect x="2" y="126" width="12" height="36"/></g>
+                <g class="c dn" transform="translate(188,0)"><rect x="7" y="128" width="2" height="50"/><rect x="2" y="136" width="12" height="30"/></g>
+                <g class="c up" transform="translate(220,0)"><rect x="7" y="96" width="2" height="62"/><rect x="2" y="104" width="12" height="40"/></g>
+                <g class="c dn" transform="translate(252,0)"><rect x="7" y="108" width="2" height="48"/><rect x="2" y="116" width="12" height="28"/></g>
+                <g class="c up" transform="translate(284,0)"><rect x="7" y="78" width="2" height="58"/><rect x="2" y="86" width="12" height="36"/></g>
+                <g class="c dn" transform="translate(316,0)"><rect x="7" y="90" width="2" height="46"/><rect x="2" y="98" width="12" height="26"/></g>
+                <g class="c up" transform="translate(348,0)"><rect x="7" y="58" width="2" height="54"/><rect x="2" y="66" width="12" height="34"/></g>
+                <g class="c dn" transform="translate(380,0)"><rect x="7" y="70" width="2" height="44"/><rect x="2" y="78" width="12" height="24"/></g>
+                <g class="c up" transform="translate(412,0)"><rect x="7" y="48" width="2" height="48"/><rect x="2" y="54" width="12" height="30"/></g>
+                <g class="c up" transform="translate(444,0)"><rect x="7" y="36" width="2" height="46"/><rect x="2" y="42" width="12" height="28"/></g>
+                <g class="c up" transform="translate(476,0)"><rect x="7" y="28" width="2" height="40"/><rect x="2" y="32" width="12" height="24"/></g>
+              </g>
+            </svg>
+            <div class="pills">
+              <span>WE TRADE</span>
+              <span class="up">STOCKS</span>
+              <span class="up">OPTIONS</span>
+              <span>CRYPTO</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow" id="flow">
+        <div class="section-head">
+          <p class="kicker">01 — How it works</p>
+          <h2>Three steps. Then you are in the chair.</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <h3>Join on Whop</h3>
+            <p>Pick Starter or Core. Access is instant — no 24-hour wait, no extra account maze.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Show up Sunday</h3>
+            <p>8:00 PM EST huddle and the weekly watchlist, so Monday is a plan — not a chase.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Trade the week</h3>
+            <p>Pre-market at 7:00 AM, daily alerts with entries and exits, and a room that talks the trade.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="tape" id="tape">
+        <div class="section-head">
+          <p class="kicker">02 — Session tape</p>
+          <h2>Embark on your journey to financial independence.</h2>
+        </div>
+        <div class="video">
+          <video controls playsinline preload="metadata" title="Selfish Trader intro">
+            <source src="assets/whiteboard-intro.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="livechart">
+          <div class="livechart__bar">
+            <span>Live tape</span>
+            <span>SPY · America/New York · search any ticker</span>
+          </div>
+          <div class="livechart__frame" id="tv-spy"></div>
+        </div>
+      </section>
+
+      <section class="desk" id="desk">
+        <div class="section-head">
+          <p class="kicker">03 — The desk</p>
+          <h2>What you get inside the room.</h2>
+          <p>Same playbook Chris runs with members — alerts, huddles, and a chat that actually talks the trade.</p>
+        </div>
+        <div class="blotter">
+          <div class="blotter__head">
+            <span>Symbol</span>
+            <span>Session</span>
+            <span>Assignment</span>
+          </div>
+          <article class="row">
+            <span class="sym">WATCH</span>
+            <span class="when">Sun 8:00 PM EST</span>
+            <div>
+              <h3>Weekly watchlists</h3>
+              <p>Potential names for the week, delivered Sunday night so you can plan before the open — not chase it.</p>
+            </div>
+          </article>
+          <article class="row">
+            <span class="sym">PREMKT</span>
+            <span class="when">7:00 AM EST</span>
+            <div>
+              <h3>Pre-market day trading</h3>
+              <p>Scan the leading gainers, read the tape, and set up the open with live market context before the bell.</p>
+            </div>
+          </article>
+          <article class="row">
+            <span class="sym">COACH</span>
+            <span class="when">Sundays + 1:1</span>
+            <div>
+              <h3>Coaching</h3>
+              <p>Free video lessons if you are new, plus one-on-one sessions when you need someone in the chair with you.</p>
+            </div>
+          </article>
+          <article class="row">
+            <span class="sym">ROOM</span>
+            <span class="when">Always on</span>
+            <div>
+              <h3>Community chat</h3>
+              <p>Shared executions, strategies, and support — beginners and experienced traders in the same room.</p>
+            </div>
+          </article>
+          <article class="row">
+            <span class="sym">ALERTS</span>
+            <span class="when">Monday–Friday</span>
+            <div>
+              <h3>Daily stock &amp; option alerts</h3>
+              <p>Entries, exits, and the reasoning behind each setup so you can learn while you trade — not just copy.</p>
+            </div>
+          </article>
+        </div>
+        <figure class="shot">
+          <img src="assets/alerts.png" alt="Daily stock and options alerts posted in the Selfish Trader chat" />
+          <figcaption>Inside the alert feed — tickers, strikes, and levels, not vague “watch this.”</figcaption>
+        </figure>
+
+        <div class="week" aria-label="Weekly session board">
+          <article data-day="Sun"><b>Sun</b><span>Huddle 8pm</span><small>Watchlist</small></article>
+          <article data-day="Mon"><b>Mon</b><span>Alerts</span><small>Premarket 7am</small></article>
+          <article data-day="Tue"><b>Tue</b><span>Alerts</span><small>Premarket 7am</small></article>
+          <article data-day="Wed"><b>Wed</b><span>Alerts</span><small>Premarket 7am</small></article>
+          <article data-day="Thu"><b>Thu</b><span>Alerts</span><small>Premarket 7am</small></article>
+          <article data-day="Fri"><b>Fri</b><span>Alerts</span><small>Premarket 7am</small></article>
+          <article data-day="Sat"><b>Sat</b><span>Journal</span><small>Review / rest</small></article>
+        </div>
+      </section>
+
+      <section class="book" id="book">
+        <div class="book__art">
+          <img src="assets/book-mockup.jpg" alt="The Selfish Trader: A Beginner's Journey Into the Stock Market by Chris King" />
+        </div>
+        <div class="book__copy">
+          <p class="kicker">04 — The book</p>
+          <h2>The Selfish Trader: a beginner’s guide.</h2>
+          <p>
+            Chris King wrote this for people who find the market loud. Clear explanations,
+            real examples, and the psychology that actually keeps you in the game.
+          </p>
+          <ul class="checks">
+            <li>How to evaluate a stock and time entries</li>
+            <li>Risk management without the textbook fog</li>
+            <li>Included free with Core membership</li>
+          </ul>
+          <a class="btn btn--cream" href="https://a.co/d/71DanIT" target="_blank" rel="noopener">Get the book on Amazon</a>
+        </div>
+      </section>
+
+      <section class="join" id="join">
+        <div class="section-head">
+          <p class="kicker">05 — Membership</p>
+          <h2>Pick your seat at the desk.</h2>
+          <p>Checkout is instant on Whop. Cancel anytime. Practice on a simulator until you are ready.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <p class="plan__tag">Starter</p>
+            <h3>Starter Chat</h3>
+            <p class="price">$5 <span>/ month</span></p>
+            <p class="plan__lead">Stay in the conversation without the full alert stack.</p>
+            <ul>
+              <li>Main community chat</li>
+              <li>Market talk &amp; stock ideas</li>
+              <li>Trader mindset &amp; support</li>
+              <li>Built for beginners who want the room</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://whop.com/selfish-trader/selfish-trader-starter-chat/" target="_blank" rel="noopener">Start at $5</a>
+          </article>
+          <article class="plan plan--core">
+            <p class="plan__tag">Recommended</p>
+            <h3>Core Access</h3>
+            <p class="price">$60 <span>/ month</span></p>
+            <p class="plan__lead">The full Selfish Trader desk — alerts, huddles, coaching, book.</p>
+            <ul>
+              <li>Free Selfish Trader book</li>
+              <li>Community chatroom</li>
+              <li>Weekly watchlists</li>
+              <li>Daily options alerts with entries &amp; exits</li>
+              <li>Custom trading journal</li>
+              <li>Live coaching Sundays 8:00 PM EST</li>
+              <li>One-on-one coaching</li>
+            </ul>
+            <a class="btn btn--green" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Get Core Access</a>
+          </article>
+        </div>
+        <p class="fine">Subscriptions renew until you cancel. After checkout, check the email you used to pay — including spam.</p>
+      </section>
+
+      <section class="proof" id="about">
+        <div class="proof__bio">
+          <p class="kicker">06 — The floor</p>
+          <h2>Chris King built a room that cares if you improve.</h2>
+          <p>
+            Trader, mentor, and broadcast ops — Chris runs Selfish Trader as a place for
+            structure and discipline, not screenshots and hype. Members show up for the huddle,
+            the alerts, and a community that talks through the hard parts.
+          </p>
+          <blockquote>
+            “A community who cares and wants to help you through your trading struggles.”
+            <cite>— Dr.Bull, Whop review</cite>
+          </blockquote>
+          <a class="text-link" href="https://whop.com/selfish-trader/" target="_blank" rel="noopener">Read more on Whop →</a>
+        </div>
+        <figure class="proof__shot">
+          <img src="assets/community.png" alt="Live huddle with Chris King sharing the trading desk" />
+          <figcaption>Sunday huddle — levels, tape, and the week ahead.</figcaption>
+        </figure>
+      </section>
+
+      <section class="faq">
+        <div class="section-head">
+          <p class="kicker">07 — Fine print, plain</p>
+          <h2>Before you join.</h2>
+        </div>
+        <div class="faq__list">
+          <details open>
+            <summary>Is this financial advice?</summary>
+            <p>No. Education and community only. Practice on a simulator. Never trade from someone else’s opinion or actions. You must be 18+.</p>
+          </details>
+          <details>
+            <summary>Can I cancel anytime?</summary>
+            <p>Yes. Memberships renew until you cancel in Whop. You keep access through the period you already paid.</p>
+          </details>
+          <details>
+            <summary>Who is this for?</summary>
+            <p>Beginners who want a guided room, and traders who want daily alerts plus a Sunday huddle — not a signal dump with no conversation.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="section-head">
+          <p class="kicker">08 — Wire the desk</p>
+          <h2>Drop us a line.</h2>
+        </div>
+        <form class="form" action="https://formsubmit.co/SelfishTrader@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Selfish Trader — website inquiry" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="full">
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn btn--green" type="submit">Send</button>
+        </form>
+        <p class="fine">Or email <a href="mailto:SelfishTrader@gmail.com">SelfishTrader@gmail.com</a></p>
+      </section>
+    </main>
+
+    <a class="dock" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Join Core Access · $60/mo</a>
+
+    <footer class="foot">
+      <div class="foot__top">
+        <a class="nav__brand" href="#top">
+          <span class="nav__mark">
+            <img src="assets/logo-mark.png" alt="" />
+          </span>
+          <span class="nav__name"><b>Selfish</b> Trader</span>
+        </a>
+        <div class="social">
+          <a href="https://www.instagram.com/selfishtrader/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.x.com/ASelfishTrader" target="_blank" rel="noopener">X</a>
+          <a href="https://www.youtube.com/channel/UChibQ3WTQBdfowHkHsMcjjg" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://whop.com/selfish-trader/" target="_blank" rel="noopener">Whop</a>
+        </div>
+      </div>
+      <details class="legal">
+        <summary>Disclaimer &amp; terms</summary>
+        <p>
+          If you do not agree with any term of our Terms and Conditions you should not use this site or its information.
+          Continued use indicates consent.
+        </p>
+        <p>
+          We caution viewers to practice ONLY on the simulator and not to use real money, and never trade based on anyone’s
+          opinion or actions. You must be at least 18 years of age to use the service.
+        </p>
+        <p>
+          No information herein is intended as securities brokerage, investment, tax, accounting or legal advice, as an offer
+          or solicitation to sell or buy, or as an endorsement of any company, security or fund. Selfish Trader cannot and
+          does not assess, verify or guarantee the adequacy, accuracy or completeness of any information, the suitability or
+          profitability of any particular investment, or the potential value of any investment or informational source. The
+          reader bears responsibility for their own research and decisions, should seek the advice of a qualified securities
+          professional, and investigate all risks before investing. Past performance is not necessarily indicative of future
+          returns. Selfish Trader accepts no liability for any direct or consequential loss arising from use of this information.
+        </p>
+      </details>
+      <p class="copy">Copyright © 2026 Selfish Trader. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
