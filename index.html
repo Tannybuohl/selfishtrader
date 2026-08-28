@@ -32,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=2" />
+    <link rel="stylesheet" href="css/styles.css?v=6" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -66,9 +66,10 @@
     </header>
 
     <div class="tape-bar" aria-hidden="true">
-      <div class="tape-fallback">
-        <span class="up">SPY</span><span>QQQ</span><span>IWM</span><span class="up">NVDA</span><span>TSLA</span><span>AAPL</span><span class="up">BTC</span><span>ETH</span>
-        <span class="up">SPY</span><span>QQQ</span><span>IWM</span><span class="up">NVDA</span><span>TSLA</span><span>AAPL</span><span class="up">BTC</span><span>ETH</span>
+      <div class="tape-track">
+        <div class="tape-set" data-tape-seed>
+          <span class="up">SPY</span><span>QQQ</span><span>IWM</span><span class="up">NVDA</span><span>TSLA</span><span>AAPL</span><span class="up">BTC</span><span>ETH</span>
+        </div>
       </div>
     </div>
 
@@ -86,7 +87,7 @@
           </p>
           <div class="hero__cta">
             <a class="btn btn--green" href="https://whop.com/selfish-trader/selfish-trader-core-access/" target="_blank" rel="noopener">Join Core Access</a>
-            <a class="btn btn--ghost" href="#tape">Watch the intro</a>
+            <a class="btn btn--ghost" href="#intro" data-play-intro>Watch the intro</a>
           </div>
           <ul class="stats">
             <li><strong>4.9</strong><span>Whop rating</span></li>
@@ -112,7 +113,7 @@
                 </linearGradient>
               </defs>
               <path class="chart__grid" d="M0 70h520M0 140h520M0 210h520" />
-              <polyline class="chart__line" points="8,210 40,198 72,186 104,194 136,160 168,168 200,132 232,140 264,108 296,118 328,84 360,96 392,70 424,78 456,52 488,44 512,38" />
+              <polyline class="chart__line" pathLength="100" points="8,210 40,198 72,186 104,194 136,160 168,168 200,132 232,140 264,108 296,118 328,84 360,96 392,70 424,78 456,52 488,44 512,38" />
               <polygon class="chart__fill" points="8,210 40,198 72,186 104,194 136,160 168,168 200,132 232,140 264,108 296,118 328,84 360,96 392,70 424,78 456,52 488,44 512,38 512,260 8,260" />
               <g class="candles">
                 <g class="c dn" transform="translate(28,0)"><rect x="7" y="168" width="2" height="48"/><rect x="2" y="180" width="12" height="28"/></g>
@@ -186,8 +187,8 @@
           <p class="kicker">02 — Session tape</p>
           <h2>Embark on your journey to financial independence.</h2>
         </div>
-        <div class="video">
-          <video controls playsinline preload="metadata" title="Selfish Trader intro">
+        <div class="video" id="intro">
+          <video id="intro-video" controls playsinline muted preload="metadata" title="Selfish Trader intro">
             <source src="assets/whiteboard-intro.mp4" type="video/mp4" />
           </video>
         </div>
@@ -404,9 +405,18 @@
       </section>
 
       <section class="contact" id="contact">
-        <div class="section-head">
-          <p class="kicker">08 — Wire the desk</p>
-          <h2>Drop us a line.</h2>
+        <div class="contact__copy">
+          <div class="section-head">
+            <p class="kicker">08 — Wire the desk</p>
+            <h2>Drop us a line.</h2>
+          </div>
+          <p class="lede">Questions about Core, the huddle, or the book. We read every note.</p>
+          <p class="fine">Or email <a href="mailto:SelfishTrader@gmail.com">SelfishTrader@gmail.com</a></p>
+          <div class="social">
+            <a href="https://www.instagram.com/selfishtrader/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.x.com/ASelfishTrader" target="_blank" rel="noopener">X</a>
+            <a href="https://www.youtube.com/channel/UChibQ3WTQBdfowHkHsMcjjg" target="_blank" rel="noopener">YouTube</a>
+          </div>
         </div>
         <form class="form" action="https://formsubmit.co/SelfishTrader@gmail.com" method="POST">
           <input type="hidden" name="_subject" value="Selfish Trader — website inquiry" />
@@ -422,11 +432,10 @@
           </label>
           <label class="full">
             Message
-            <textarea name="message" rows="5" required></textarea>
+            <textarea name="message" rows="6" required></textarea>
           </label>
           <button class="btn btn--green" type="submit">Send</button>
         </form>
-        <p class="fine">Or email <a href="mailto:SelfishTrader@gmail.com">SelfishTrader@gmail.com</a></p>
       </section>
     </main>
 
@@ -470,6 +479,6 @@
       <p class="copy">Copyright © 2026 Selfish Trader. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js?v=2"></script>
+    <script src="js/main.js?v=6"></script>
   </body>
 </html>
