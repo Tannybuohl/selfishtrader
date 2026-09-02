@@ -54,7 +54,7 @@ function sessionState() {
   let name = "Closed";
   let tone = "off";
 
-  if (weekday === "Sun" && mins >= 19 * 60 && mins < 21 * 60) {
+  if (weekday === "Sun" && mins >= 19 * 60 && mins < 20 * 60) {
     name = "Huddle live";
     tone = "live";
   } else if (!weekend && mins >= 4 * 60 && mins < 9 * 60 + 30) {
@@ -144,11 +144,11 @@ function nextHuddle() {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const dow = days.indexOf(ny.weekday);
   const mins = ny.hour * 60 + ny.minute;
-  const start = 20 * 60;
-  const end = 21 * 60;
+  const start = 19 * 60;
+  const end = 20 * 60;
 
   if (dow === 0 && mins >= start && mins < end) {
-    return { live: true, target: nyWallToUtc(ny.year, ny.month, ny.day, 21, 0, 0) };
+    return { live: true, target: nyWallToUtc(ny.year, ny.month, ny.day, 20, 0, 0) };
   }
 
   let daysAhead = (7 - dow) % 7;
@@ -158,7 +158,7 @@ function nextHuddle() {
   const targetDay = addDays(ny.year, ny.month, ny.day, daysAhead);
   return {
     live: false,
-    target: nyWallToUtc(targetDay.year, targetDay.month, targetDay.day, 20, 0, 0),
+    target: nyWallToUtc(targetDay.year, targetDay.month, targetDay.day, 19, 0, 0),
   };
 }
 
@@ -188,8 +188,8 @@ function paintHuddle() {
   const status = root.querySelector("[data-huddle-status]");
   if (status) {
     status.textContent = live
-      ? "Huddle is live now — Sunday 8:00 PM EST"
-      : "Next huddle · Sunday 8:00 PM EST";
+      ? "Huddle is live now — Sunday 7:00 PM ET"
+      : "Next huddle · Sunday 7:00 PM ET";
   }
 }
 
