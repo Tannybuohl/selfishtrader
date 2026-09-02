@@ -1168,6 +1168,11 @@ p {
   margin-bottom: 1rem;
 }
 
+.plan__lead strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
 .plan ul {
   margin: 0 0 1.4rem;
   padding: 0;
